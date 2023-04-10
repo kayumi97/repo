@@ -69,8 +69,7 @@ public class Dcm2Jpg {
 	
 
     private static ResourceBundle rb =
-        //ResourceBundle.getBundle("org.dcm4che3.tool.dcm2jpg.messages");
-        ResourceBundle.getBundle("org.dcm4che3.tool.Dcm2Dpg.messages");
+        ResourceBundle.getBundle("org.dcm4che3.tool.dcm2jpg.messages");
 
     private interface ReadImage {
         BufferedImage apply(File src) throws IOException;

@@ -66,7 +66,7 @@ public class DicomController {
 	@Value("${pacs.storage.dcm}")
 	private String pacsDcmStoragePath;
 	
-	@Value("${pacs.storage.2run}")
+	//@Value("${pacs.storage.2run}")
 	private String pacs2RunStoragePath;
 
 	private static final Logger LOG = LoggerFactory.getLogger(HomeController.class);
@@ -118,9 +118,6 @@ public class DicomController {
 
 	@RequestMapping(value = "/createjpg/{pkTBLInstanceID}", method = RequestMethod.GET)
 	public @ResponseBody ResponseEntity<AjaxInstance> getImage(@PathVariable Long pkTBLInstanceID, HttpServletRequest request, HttpServletResponse response) throws IOException{
-		String mensagem = "Olá, mundo!";
-		System.out.println(mensagem);
-		System.out.println(pacsDcmStoragePath);
 
 		java.io.File tempImage = null;   
 		Instance instance = instanceDao.findById(pkTBLInstanceID);
@@ -239,8 +236,6 @@ public class DicomController {
 	
 	@RequestMapping(value="/showimage/{pkTBLInstanceID}", method = RequestMethod.GET)
 	public @ResponseBody ResponseEntity<AjaxInstance> showImage(@PathVariable Long pkTBLInstanceID) throws IOException {
-
-		System.out.println("Olá, mundo!");
 
 		AjaxInstance ret = null;
 

@@ -79,8 +79,9 @@ import org.dcm4che3.util.SafeClose;
  */
 public class Dcm2Dcm {
 
-    private static ResourceBundle rb = ResourceBundle.getBundle("org.easy.util.Dcm2Dcm");
-    //private static ResourceBundle rb = ResourceBundle.getBundle("messages");
+    private static ResourceBundle rb =
+        ResourceBundle.getBundle("org.easy.util.Dcm2Dcm");
+
     private String tsuid;
     private TransferSyntaxType tstype;
     private boolean retainfmi;

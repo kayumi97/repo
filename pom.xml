@@ -5,26 +5,26 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<build>
-	    <plugins>
-	      	<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-				<verbose>true</verbose>
-				<fork>true</fork>
-				<executable>${JAVA_HOME}\bin\javac</executable>
-				<compilerVersion>11.0.17</compilerVersion>
-				</configuration>
-	      	</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-surefire-plugin</artifactId>
-			</plugin>
-	    </plugins>
+		<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                <verbose>true</verbose>
+                <fork>true</fork>
+                <executable>${JAVA_HOME}\bin\javac</executable>
+                <compilerVersion>11.0.17</compilerVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+        </plugins>	    
 	  </build>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -59,10 +59,9 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+
 	</properties>
 	<dependencies>
-
-		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -117,9 +116,6 @@
 			<version>31.0.1-jre</version>
 		</dependency>
 
-
-
-
 		<!--<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -171,8 +167,6 @@
 			<scope>compile</scope>
 		</dependency>
 
-
-
 		<!-- https://mvnrepository.com/artifact/org.dcm4che/dcm4che-core -->
 		<dependency>
 			<groupId>org.dcm4che</groupId>
@@ -189,50 +183,60 @@
 			<artifactId>dcm4che-net</artifactId>
 			<version>5.23.3</version>
 			<scope>compile</scope>
+
 		</dependency>
-
-
+		
 		<!-- https://mvnrepository.com/artifact/org.dcm4che.tool/dcm4che-tool-dcm2jpg -->
 		<dependency>
 			<groupId>org.dcm4che.tool</groupId>
 			<artifactId>dcm4che-tool-dcm2jpg</artifactId>
-			<version>5.12.0</version>
+			<version>5.23.3</version>
 			<scope>compile</scope>
-		</dependency>
 
-		<!-- <dependency>
-			<groupId>dcm4che.tool</groupId>
-			<artifactId>dcm4che-tool-dcm2dcm</artifactId>
-			<version>2.0.29</version>
-		</dependency>-->
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.dcm4che/dcm4che-imageio -->
 		<dependency>
 			<groupId>org.dcm4che</groupId>
 			<artifactId>dcm4che-imageio</artifactId>
 			<version>5.23.3</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>nu.pattern</groupId>
-			<artifactId>opencv</artifactId>
-			<version>2.4.9-7</version>
+			<scope>compile</scope>			
 		</dependency>
 		
-		<dependency>
+	
+ 		<dependency>
 			<groupId>org.dcm4che</groupId>
-			<artifactId>dcm4che-imageio-opencv</artifactId>
-			<version>5.25.1</version>
-			<scope>compile</scope>
+			<artifactId>dcm4che-imageio-opencv</artifactId> 
+		 	<version>5.21.0</version>
+			<scope>compile</scope>		
+		</dependency> 
+		
+		<dependency>
+  			 <groupId>nu.pattern</groupId>
+ 			  <artifactId>opencv</artifactId>
+ 			  <version>2.4.9-7</version>
 		</dependency>
 				
+		<!-- https://mvnrepository.com/artifact/org.openpnp/opencv -->
+		<!-- <dependency>
+   			<groupId>org.openpnp</groupId>
+    		<artifactId>opencv</artifactId>
+    		<version>4.6.0-0</version>
+		</dependency>-->
+
+		<!-- <dependency>
+    		<groupId>dcm4che.tool</groupId>
+   			 <artifactId>dcm4che-tool-dcm2dcm</artifactId>
+    		<version>2.0.29</version>
+		</dependency>-->
+
 		<!-- https://mvnrepository.com/artifact/org.dcm4che.tool/dcm4che-tool-common -->
 		<dependency>
 			<groupId>org.dcm4che.tool</groupId>
 			<artifactId>dcm4che-tool-common</artifactId>
 			<version>5.23.3</version>
-			<scope>compile</scope>
+						<scope>compile</scope>
+			
 		</dependency>
 
 
@@ -244,6 +248,7 @@
 			<artifactId>dcm4che-tool-storescu</artifactId>
 			<version>5.23.3</version>
 			<scope>compile</scope>
+
 		</dependency>
 
 

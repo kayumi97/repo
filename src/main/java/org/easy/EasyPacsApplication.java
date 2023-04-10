@@ -55,13 +55,17 @@ public class EasyPacsApplication {
 	/*public static void main(String[] args) {
 		SpringApplication.run(EasyPacsApplication.class, args);
 	}*/
+	
 	private static final Logger LOG = LoggerFactory.getLogger(EasyPacsApplication.class);
+	
     public static void main(String[] args) {
               
+    	
     	SpringApplication app = new SpringApplication(EasyPacsApplication.class);
         /*app.set
         app.setWebEnvironment(true);*/
         app.run(args);
+        
         
         LOG.info("Welcome to EasyPACS!");
     }
